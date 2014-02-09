@@ -1,11 +1,11 @@
 /*
-** heap.c for malloc in /home/bade/Dev/tek2/Unix/malloc
+** heap.c for malloc in /home/delemo_b/Dev/tek2/Unix/malloc
 **
 ** Made by Barthelemy Delemotte
-** Login   <bade@epitech.net>
+** Login   <delemo_b@epitech.net>
 **
 ** Started on Thu Feb  6 12:06:35 2014 Barthelemy Delemotte
-** Last update Thu Feb  6 12:06:36 2014 Barthelemy Delemotte
+** Last update Sun Feb  9 20:25:38 2014 Barthelemy Delemotte
 */
 
 #include	<unistd.h>
@@ -89,7 +89,7 @@ int		heap_init(void)
   SET(heap_root + DWORD_SIZE + WORD_SIZE, PACK(0, 1));
   heap_root += 4 * WORD_SIZE;
   if (heap_extend(CHUNK_SIZE / WORD_SIZE) == NULL)
-    return -1;
+    return (-1);
   return (0);
 }
 
@@ -106,10 +106,10 @@ t_ptr		heap_search(size_t size)
   while (GET_B_SIZE(block) > 0)
     {
       if (!IS_B_ALLOC(block) && size <= GET_B_SIZE(block))
-	return block;
+	return (block);
       block = GET_NEXT(block);
     }
-  return NULL;
+  return (NULL);
 }
 
 /*

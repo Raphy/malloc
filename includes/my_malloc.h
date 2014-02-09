@@ -1,11 +1,11 @@
 /*
-** my_malloc.h for malloc in /home/bade/Dev/tek2/Unix/malloc
+** my_malloc.h for malloc in /home/delemo_b/Dev/tek2/Unix/malloc
 **
 ** Made by Barthelemy Delemotte
-** Login   <bade@epitech.net>
+** Login   <delemo_b@epitech.net>
 **
 ** Started on Thu Feb  6 12:02:21 2014 Barthelemy Delemotte
-** Last update Thu Feb  6 12:02:27 2014 Barthelemy Delemotte
+** Last update Sun Feb  9 20:37:30 2014 Barthelemy Delemotte
 */
 
 #ifndef		MY_MALLOC_H_
@@ -16,7 +16,7 @@
 /*
 ** Pointer type
 */
-typedef char	*t_ptr;
+typedef	char	*t_ptr;
 
 /*
 ** CONSTANTS SIZE

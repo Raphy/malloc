@@ -1,15 +1,16 @@
 /*
-** realloc.c for malloc in /home/bade/Dev/tek2/Unix/malloc
+** realloc.c for malloc in /home/delemo_b/Dev/tek2/Unix/malloc
 **
 ** Made by Barthelemy Delemotte
-** Login   <bade@epitech.net>
+** Login   <delemo_b@epitech.net>
 **
 ** Started on Thu Feb  6 12:06:58 2014 Barthelemy Delemotte
-** Last update Thu Feb  6 12:07:37 2014 Barthelemy Delemotte
+** Last update Sun Feb  9 20:26:47 2014 Barthelemy Delemotte
 */
 
 #include	<string.h>
 #include	<assert.h>
+
 #include	"my_malloc.h"
 
 /*
@@ -45,22 +46,21 @@ void		*realloc(void *ptr, size_t size)
   t_ptr		block;
   t_ptr		new_block;
 
-  if (ptr == NULL)
+  if (!ptr)
     return (malloc(size));
-  else if (!size)
+  if (!size)
     {
       free(ptr);
-      return NULL;
+      return (NULL);
     }
   block = (t_ptr)ptr;
   assert(IS_B_ALLOC(block));
-  if (GET_B_SIZE(block) - EXTRA_SIZE >= size)
-    return ptr;
-  if (realloc_by_merge(ptr, size) == 0)
-    return ptr;
-  if ((new_block = malloc(size)) == NULL)
-    return NULL;
+  if (GET_B_SIZE(block) - EXTRA_SIZE >= size
+      || realloc_by_merge(ptr, size) != -1)
+    return (ptr);
+  if (!(new_block = malloc(size)))
+    return (NULL);
   memcpy(new_block, block, GET_B_SIZE(block) - EXTRA_SIZE);
   free(block);
-  return new_block;
+  return (new_block);
 }

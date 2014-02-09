@@ -1,11 +1,11 @@
 /*
-** free.c for malloc in /home/bade/Dev/tek2/Unix/malloc
+** free.c for malloc in /home/delemo_b/Dev/tek2/Unix/malloc
 **
 ** Made by Barthelemy Delemotte
-** Login   <bade@epitech.net>
+** Login   <delemo_b@epitech.net>
 **
 ** Started on Thu Feb  6 12:06:28 2014 Barthelemy Delemotte
-** Last update Thu Feb  6 12:06:29 2014 Barthelemy Delemotte
+** Last update Sun Feb  9 20:25:37 2014 Barthelemy Delemotte
 */
 
 #include	<assert.h>

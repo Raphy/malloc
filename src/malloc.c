@@ -1,14 +1,15 @@
 /*
-** malloc.c for malloc in /home/bade/Dev/tek2/Unix/malloc
+** malloc.c for malloc in /home/delemo_b/Dev/tek2/Unix/malloc
 **
 ** Made by Barthelemy Delemotte
-** Login   <bade@epitech.net>
+** Login   <delemo_b@epitech.net>
 **
 ** Started on Thu Feb  6 12:06:43 2014 Barthelemy Delemotte
-** Last update Sun Feb  9 20:09:09 2014 Barthelemy Delemotte
+** Last update Sun Feb  9 20:25:38 2014 Barthelemy Delemotte
 */
 
 #include	<stdlib.h>
+
 #include	"my_malloc.h"
 
 /*
@@ -24,7 +25,7 @@ void		*malloc(size_t size)
   size_t	real_size;
   t_ptr		block;
 
-  if (!size || (heap_root == NULL && heap_init() == -1))
+  if (!size || (!heap_root && heap_init() == -1))
     return (NULL);
   if (size <= DWORD_SIZE)
     real_size = DWORD_SIZE + EXTRA_SIZE;
@@ -34,7 +35,7 @@ void		*malloc(size_t size)
 		   / DWORD_SIZE) * DWORD_SIZE;
     }
   block = heap_search(real_size);
-  if (block == NULL)
+  if (!block)
     block = heap_extend((real_size > CHUNK_SIZE ?
 			 real_size : CHUNK_SIZE) / WORD_SIZE);
   if (block)
