@@ -5,9 +5,10 @@
 ** Login   <bade@epitech.net>
 **
 ** Started on Thu Feb  6 12:06:43 2014 Barthelemy Delemotte
-** Last update Thu Feb  6 12:16:04 2014 Barthelemy Delemotte
+** Last update Sun Feb  9 20:09:09 2014 Barthelemy Delemotte
 */
 
+#include	<stdlib.h>
 #include	"my_malloc.h"
 
 /*

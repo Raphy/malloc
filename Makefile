@@ -5,11 +5,11 @@
 ## Login   <bade@epitech.net>
 ## 
 ## Started on Thu Feb  6 12:02:38 2014 Barthelemy Delemotte
-## Last update Sat Feb  8 17:32:08 2014 Barthelemy Delemotte
+## Last update Sun Feb  9 20:10:03 2014 Barthelemy Delemotte
 ##
 
 INCPATH = includes/
-CC = clang
+CC = gcc
 CFLAGS = -I $(INCPATH) -Wall -Wextra -pedantic -fPIC -O3
 LDFLAGS = -shared
 TARGET = libmy_malloc_$(HOSTTYPE).so
