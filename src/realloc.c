@@ -5,12 +5,11 @@
 ** Login   <delemo_b@epitech.net>
 **
 ** Started on Thu Feb  6 12:06:58 2014 Barthelemy Delemotte
-** Last update Sun Feb  9 20:26:47 2014 Barthelemy Delemotte
+** Last update Fri Feb 14 02:17:19 2014 raphael defreitas
 */
 
 #include	<string.h>
 #include	<assert.h>
-
 #include	"my_malloc.h"
 
 /*

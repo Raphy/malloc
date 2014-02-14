@@ -5,11 +5,10 @@
 ** Login   <delemo_b@epitech.net>
 **
 ** Started on Thu Feb  6 12:02:53 2014 Barthelemy Delemotte
-** Last update Sun Feb  9 20:25:39 2014 Barthelemy Delemotte
+** Last update Fri Feb 14 02:17:55 2014 raphael defreitas
 */
 
 #include	<string.h>
-
 #include	"my_malloc.h"
 
 void		*calloc(size_t nmemb, size_t size)
